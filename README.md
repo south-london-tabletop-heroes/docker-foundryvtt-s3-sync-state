@@ -1,2 +1,2 @@
-# docker-foundryvtt-s3fs-fuse
-Docker image for FoundryVTT server with s3fs-fuse backend for data storage.
+# docker-foundryvtt-s3-sync-state
+Docker image for FoundryVTT server with local data state that syncs back and forth with S3.

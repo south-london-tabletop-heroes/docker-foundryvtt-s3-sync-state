@@ -1,0 +1,20 @@
+version: "3.8"
+   
+services:
+  foundryvtt-s3-sync-state:
+    image: "foundryvtt-s3-sync-state:latest"
+    build:
+      context: .
+      args:
+        FOUNDRYVTT_UID: 999
+        FOUNDRYVTT_GID: 999
+    environment:
+      AWS_ACCESS_KEY_ID: "dummy"
+      AWS_SECRET_ACCESS_KEY: "dummy"
+      AWS_DEFAULT_REGION: "eu-west-2"
+      AWS_S3_STATE: "true"
+      AWS_S3_STATE_BUCKET_NAME: "dummy"
+      AWS_S3_MEDIA: "false" # I can't seem to get the S3 File Storage Integration working. 
+    ports:
+    - "30000:30000"
+
